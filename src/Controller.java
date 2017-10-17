@@ -34,24 +34,24 @@ public class Controller extends MyPanel implements DeadwoodListener {
     public void move(String to){
     	board.player().move(board.getRoom(to));
     }	
-	public void work(String r){
-		board.player().takeRole(board.getRole(r));  
+    public void work(String r){
+	board.player().takeRole(board.getRole(r));  
+    }
+    public void act(String name){		
+	if (board.player().getRoom().getName().equals(name)) {
+		board.player().act();  
+        }
+    }	
+    public void rehearse(int id){
+	if (board.player().getId() == id) {
+		board.player().rehearse();  
 	}
-	public void act(String name){		
-		if (board.player().getRoom().getName().equals(name)) {
-			board.player().act();  
-		}
-	}	
-	public void rehearse(int id){
-		if (board.player().getId() == id) {
-			board.player().rehearse();  
-		}
-	}
-	public void upgrade(int level, String type){
+    }
+    public void upgrade(int level, String type){
         board.player().upgrade(level, type);
-	}
-	public void end(){
-		System.out.println();
+    }
+    public void end(){
+	System.out.println();
         board.endTurn();   
-	}
+    }
 }
