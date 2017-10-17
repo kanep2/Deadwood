@@ -11,21 +11,21 @@ public class Scene {
         public void update();
     } 
 
-  	private String name; 
- 	  private int id;  	
-  	private int budget;
-  	private List<Role> roles;
+    private String name; 
+    private int id;  	
+    private int budget;
+    private List<Role> roles;
     private ImageIcon image;
 
-  	protected Scene(String s, String i, String b, List<Role> p, ImageIcon img) {
-      	name = s;
-   		  id = Integer.parseInt(i);
-   		  budget = Integer.parseInt(b);
- 		    for (Role r : p){
- 			      r.setScene(this);
- 		    }
- 		    roles = p;	
-  	    image = img;
+    protected Scene(String s, String i, String b, List<Role> p, ImageIcon img) {
+	name = s;
+        id = Integer.parseInt(i);
+        budget = Integer.parseInt(b);
+        for (Role r : p){
+	      r.setScene(this);
+        }
+        roles = p;	
+        image = img;
     }
 
   	public String getName() { return name; }
