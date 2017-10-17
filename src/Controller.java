@@ -28,18 +28,7 @@ public class Controller extends MyPanel implements DeadwoodListener {
 	      			end();
 	    		}
 	  		});		
-	    
-	    /*endL = new JLabel();
-	    add(endL);
-	    endL.setBounds(Deadwood.w, 0, 1600-Deadwood.w, Deadwood.h);
-		endL.addMouseListener(
-	  		new MouseAdapter() {
-	    		public void mouseClicked(MouseEvent e) {
-	      			end();
-	    		}
-	  		});		    */
-		
-
+	   		
 
     }
     public void move(String to){
